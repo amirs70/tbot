@@ -1,0 +1,21 @@
+{
+  "name": "amirm/t_bot",
+  "version": "0.0.0",
+  "description": "Multiple telegram bot with the same website",
+  "autoload": {
+    "psr-4": {
+      "Amirm\\TBot\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Amirm"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "laravel/framework": "*",
+    "guzzlehttp/guzzle": "7.9.2",
+    "ext-curl": "*"
+  }
+}
