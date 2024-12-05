@@ -1,11 +1,11 @@
 <?php
 
-namespace Amirm\TBot\Telegram\bots\Family\reacts;
+namespace Amirm\T_Bot\Telegram\bots\Family\reacts;
 
-use Amirm\TBot\Telegram\Core\Chat\InlineButton;
-use Amirm\TBot\Telegram\Core\Chat\SingleChat;
-use Amirm\TBot\Telegram\Core\Reactable;
-use Amirm\TBot\Telegram\Core\TelegramBot;
+use Amirm\T_Bot\Telegram\Core\Chat\InlineButton;
+use Amirm\T_Bot\Telegram\Core\Chat\SingleChat;
+use Amirm\T_Bot\Telegram\Core\Reactable;
+use Amirm\T_Bot\Telegram\Core\TelegramBot;
 
 class ReactStart extends Reactable
 {
@@ -62,13 +62,13 @@ class ReactStart extends Reactable
 
     public function use(): void
     {
-        $this->getBot()->reactTo(["/start", "start_button", "منوی اصلی"], [$this, "start"]);
+        $this->geT_Bot()->reactTo(["/start", "start_button", "منوی اصلی"], [$this, "start"]);
     }
 
     public function start($chat_id, $message, $point, $message_id, $rawMessage): void
     {
         /*$this->bot->getStorage()
             ->writeBotSetting("last", (json_encode(file_get_contents('php://input'), true)));*/
-        ReactStart::sendStartMsg($this->getBot(), $chat_id, true, $message === "start_button" ? $message_id : null);
+        ReactStart::sendStartMsg($this->geT_Bot(), $chat_id, true, $message === "start_button" ? $message_id : null);
     }
 }

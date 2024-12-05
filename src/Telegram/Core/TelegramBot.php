@@ -1,9 +1,9 @@
 <?php
 
-namespace Amirm\TBot\Telegram\Core;
+namespace Amirm\T_Bot\Telegram\Core;
 
-use Amirm\TBot\Init\Functions;
-use Amirm\TBot\Telegram\Core\Storage\TelegramStorage;
+use Amirm\T_Bot\Init\Functions;
+use Amirm\T_Bot\Telegram\Core\Storage\TelegramStorage;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
@@ -28,7 +28,7 @@ abstract class TelegramBot
 
     public function prepare(): void
     {
-        Route::post("/bot/{$this->getBotPath()}", [$this::class, "sortProperReact"]);
+        Route::post("/bot/{$this->geT_BotPath()}", [$this::class, "sortProperReact"]);
     }
 
     public function sortProperReact(): JsonResponse
@@ -81,7 +81,7 @@ abstract class TelegramBot
         return Event::find($message, $point);
     }
 
-    public function getBotPath(): string
+    public function geT_BotPath(): string
     {
         return explode(":", $this->getApi())[1];
     }

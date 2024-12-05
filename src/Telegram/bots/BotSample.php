@@ -1,10 +1,10 @@
 <?php
 
-namespace Amirm\TBot\Telegram\bots;
+namespace Amirm\T_Bot\Telegram\bots;
 
-use Amirm\TBot\Telegram\Core\Storage\MySQLStorage;
-use Amirm\TBot\Telegram\Core\Storage\TelegramStorage;
-use Amirm\TBot\Telegram\Core\TelegramBot;
+use Amirm\T_Bot\Telegram\Core\Storage\MySQLStorage;
+use Amirm\T_Bot\Telegram\Core\Storage\TelegramStorage;
+use Amirm\T_Bot\Telegram\Core\TelegramBot;
 
 class BotSample extends TelegramBot
 {

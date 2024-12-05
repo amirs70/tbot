@@ -1,6 +1,6 @@
 <?php
 
-namespace Amirm\TBot;
+namespace Amirm\T_Bot;
 
 class TBot
 {

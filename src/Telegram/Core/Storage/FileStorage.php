@@ -1,8 +1,8 @@
 <?php
 
-namespace Amirm\TBot\Telegram\Core\Storage;
+namespace Amirm\T_Bot\Telegram\Core\Storage;
 
-use Amirm\TBot\Init\Functions;
+use Amirm\T_Bot\Init\Functions;
 
 abstract class FileStorage implements TelegramStorage
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Amirm\TBot\Telegram\Core;
+namespace Amirm\T_Bot\Telegram\Core;
 
-use Amirm\TBot\Init\Functions;
+use Amirm\T_Bot\Init\Functions;
 use Illuminate\Support\Facades\Response;
 use Symfony\Component\HttpFoundation\JsonResponse;
 

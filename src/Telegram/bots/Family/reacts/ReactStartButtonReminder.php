@@ -1,22 +1,22 @@
 <?php
 
-namespace Amirm\TBot\Telegram\bots\Family\reacts;
+namespace Amirm\T_Bot\Telegram\bots\Family\reacts;
 
-use Amirm\TBot\Telegram\Core\Chat\InlineButton;
-use Amirm\TBot\Telegram\Core\Chat\SingleChat;
-use Amirm\TBot\Telegram\Core\Reactable;
+use Amirm\T_Bot\Telegram\Core\Chat\InlineButton;
+use Amirm\T_Bot\Telegram\Core\Chat\SingleChat;
+use Amirm\T_Bot\Telegram\Core\Reactable;
 
 class ReactStartButtonReminder extends Reactable
 {
 
     public function use(): void
     {
-        $this->getBot()->reactTo("set_reminder", [$this, "startReminder"]);
-        $this->getBot()->reactTo(["set_reminder_periodic", "set_reminder_timer", "set_reminder_schedule"], [$this, "selectReminder"]);
-        $this->getBot()->reactTo("any", ["set_reminder_timer", "set_reminder_periodic"], [$this, "selectReminderTitle"]);
-        $this->getBot()->reactTo("any", "set_reminder_timer_title", [$this, "selectReminderTitle"]);
-        $this->getBot()->reactTo("any", "set_reminder_periodic_title", [$this, "selectReminderTitle"]);
-        $this->getBot()->reactTo("any", "selectReminderTitle_title", [$this, "selectReminderTitle"]);
+        $this->geT_Bot()->reactTo("set_reminder", [$this, "startReminder"]);
+        $this->geT_Bot()->reactTo(["set_reminder_periodic", "set_reminder_timer", "set_reminder_schedule"], [$this, "selectReminder"]);
+        $this->geT_Bot()->reactTo("any", ["set_reminder_timer", "set_reminder_periodic"], [$this, "selectReminderTitle"]);
+        $this->geT_Bot()->reactTo("any", "set_reminder_timer_title", [$this, "selectReminderTitle"]);
+        $this->geT_Bot()->reactTo("any", "set_reminder_periodic_title", [$this, "selectReminderTitle"]);
+        $this->geT_Bot()->reactTo("any", "selectReminderTitle_title", [$this, "selectReminderTitle"]);
     }
 
     public static function btnReminder($back_fn = "start_button", $jusBack = false): array
@@ -36,7 +36,7 @@ class ReactStartButtonReminder extends Reactable
 
     public function startReminder($chat_id, $message, $point, $message_id): void
     {
-        $this->getBot()->editMessageText(
+        $this->geT_Bot()->editMessageText(
             SingleChat::create($chat_id, $message_id)
                 ->setReplyMarkupInlineKeyboardRow(ReactStartButtonReminder::btnReminder())
                 ->setText(__("Select the reminder type\nThe periodic reminder will be reminding you at the proper circular times but the timer reminder will remind you once, at the time you pick"))
@@ -45,7 +45,7 @@ class ReactStartButtonReminder extends Reactable
 
     public function selectReminder($chat_id, $message, $point, $message_id): void
     {
-        $this->getBot()
+        $this->geT_Bot()
             ->point($chat_id, $message)
             ->editMessageText(
                 SingleChat::create($chat_id, $message_id)
@@ -56,26 +56,26 @@ class ReactStartButtonReminder extends Reactable
 
     public function selectReminderTitle($chat_id, $message, $point, $message_id): void
     {
-        $this->getBot()
+        $this->geT_Bot()
             ->point($chat_id, $point . "_title")
             ->userMeta($chat_id, "reminder_title", $message)
             ->sendMessage(
                 SingleChat::create($chat_id)
                     ->setText(__("Enter the title of this reminder"))
             );
-        //ReactStart::sendStartMsg($this->getBot(), $chat_id, true);
+        //ReactStart::sendStartMsg($this->geT_Bot(), $chat_id, true);
     }
 
     /*public function selectReminderTitle($chat_id, $message, $point, $message_id): void
     {
-        $this->getBot()
+        $this->geT_Bot()
             ->point($chat_id, $point . "_title")
             ->userMeta($chat_id, "reminder_title", $message)
             ->sendMessage(
                 SingleChat::create($chat_id)
                     ->setText(__("Enter the title of this reminder"))
             );
-        //ReactStart::sendStartMsg($this->getBot(), $chat_id, true);
+        //ReactStart::sendStartMsg($this->geT_Bot(), $chat_id, true);
     }*/
 
 }

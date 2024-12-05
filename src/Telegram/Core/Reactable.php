@@ -1,6 +1,6 @@
 <?php
 
-namespace Amirm\TBot\Telegram\Core;
+namespace Amirm\T_Bot\Telegram\Core;
 
 abstract class Reactable
 {
@@ -12,7 +12,7 @@ abstract class Reactable
         $this->bot = $bot;
     }
 
-    public function getBot(): TelegramBot
+    public function geT_Bot(): TelegramBot
     {
         return $this->bot;
     }

@@ -4,7 +4,7 @@
   "description": "Multiple telegram bot with the same website",
   "autoload": {
     "psr-4": {
-      "Amirm\\TBot\\": "src/"
+      "Amirm\\T_Bot\\": "src/"
     }
   },
   "authors": [

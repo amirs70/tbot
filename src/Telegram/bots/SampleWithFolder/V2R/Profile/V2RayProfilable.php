@@ -1,9 +1,9 @@
 <?php
 
-namespace Amirm\TBot\Telegram\bots\SampleWithFolder\V2R\Profile;
+namespace Amirm\T_Bot\Telegram\bots\SampleWithFolder\V2R\Profile;
 
-use Amirm\TBot\Init\Key;
-use Amirm\TBot\Telegram\bots\SampleWithFolder\V2R\V2R;
+use Amirm\T_Bot\Init\Key;
+use Amirm\T_Bot\Telegram\bots\SampleWithFolder\V2R\V2R;
 
 abstract class V2RayProfilable
 {

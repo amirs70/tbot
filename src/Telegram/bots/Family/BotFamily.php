@@ -1,13 +1,13 @@
 <?php
 
-namespace Amirm\TBot\Telegram\bots\Family;
+namespace Amirm\T_Bot\Telegram\bots\Family;
 
-use Amirm\TBot\Telegram\bots\Family\reacts\ReactStart;
-use Amirm\TBot\Telegram\bots\Family\reacts\ReactStartButtonLanguage;
-use Amirm\TBot\Telegram\bots\Family\reacts\ReactStartButtonReminder;
-use Amirm\TBot\Telegram\Core\Storage\MySQLStorage;
-use Amirm\TBot\Telegram\Core\Storage\TelegramStorage;
-use Amirm\TBot\Telegram\Core\TelegramBot;
+use Amirm\T_Bot\Telegram\bots\Family\reacts\ReactStart;
+use Amirm\T_Bot\Telegram\bots\Family\reacts\ReactStartButtonLanguage;
+use Amirm\T_Bot\Telegram\bots\Family\reacts\ReactStartButtonReminder;
+use Amirm\T_Bot\Telegram\Core\Storage\MySQLStorage;
+use Amirm\T_Bot\Telegram\Core\Storage\TelegramStorage;
+use Amirm\T_Bot\Telegram\Core\TelegramBot;
 
 class BotFamily extends TelegramBot
 {

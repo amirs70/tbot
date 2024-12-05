@@ -1,6 +1,6 @@
 <?php
 
-namespace Amirm\TBot\Telegram\Core\Storage;
+namespace Amirm\T_Bot\Telegram\Core\Storage;
 
 interface TelegramStorage
 {

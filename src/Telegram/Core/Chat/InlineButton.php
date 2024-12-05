@@ -1,6 +1,6 @@
 <?php
 
-namespace Amirm\TBot\Telegram\Core\Chat;
+namespace Amirm\T_Bot\Telegram\Core\Chat;
 
 class InlineButton
 {

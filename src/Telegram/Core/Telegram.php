@@ -1,9 +1,9 @@
 <?php
 
-namespace Amirm\TBot\Telegram\Core;
+namespace Amirm\T_Bot\Telegram\Core;
 
-use Amirm\TBot\Init\Functions;
-use Amirm\TBot\Init\Request;
+use Amirm\T_Bot\Init\Functions;
+use Amirm\T_Bot\Init\Request;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Route;
@@ -38,7 +38,7 @@ class Telegram
         return Telegram::$obj;
     }
 
-    private function sortBots($prepare = false): void
+    private function sorT_Bots($prepare = false): void
     {
         $bots = (array)scandir(__DIR__ . "/../bots");
         unset($bots[0], $bots[1]);
@@ -61,7 +61,7 @@ class Telegram
     public function init(): self
     {
 
-        $this->sortBots(true);
+        $this->sorT_Bots(true);
 
         Route::get("/Telegram/Hooks/Restart", [Telegram::class, "resetHooks"]);
 
@@ -70,14 +70,14 @@ class Telegram
 
     public function resetHooks(): JsonResponse
     {
-        $this->sortBots();
+        $this->sorT_Bots();
         $a = [];
         $b = [];
         if (Functions::is_array_plus($this->bots)) {
             foreach ($this->bots as $bot) {
-                $b[] = Request::create(Telegram::URI . $bot->getApi() . "/setwebhook?url=" . urlencode(url("/bot/" . $bot->getBotPath())))
+                $b[] = Request::create(Telegram::URI . $bot->getApi() . "/setwebhook?url=" . urlencode(url("/bot/" . $bot->geT_BotPath())))
                     ->execute(Request::METHOD_GET);
-                $a[] = Telegram::URI . $bot->getApi() . "/setwebhook?url=" . url("/bot/" . $bot->getBotPath());
+                $a[] = Telegram::URI . $bot->getApi() . "/setwebhook?url=" . url("/bot/" . $bot->geT_BotPath());
             }
             return Response::json([
                 "success" => true,

@@ -1,8 +1,8 @@
 <?php
 
-namespace Amirm\TBot\Telegram\Core\Storage;
+namespace Amirm\T_Bot\Telegram\Core\Storage;
 
-use Amirm\TBot\Models\Setting;
+use Amirm\T_Bot\Models\Setting;
 
 class MySQLStorage implements TelegramStorage
 {

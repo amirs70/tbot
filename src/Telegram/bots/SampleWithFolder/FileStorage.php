@@ -1,8 +1,8 @@
 <?php
 
-namespace Amirm\TBot\Telegram\bots\SampleWithFolder;
+namespace Amirm\T_Bot\Telegram\bots\SampleWithFolder;
 
-use Amirm\TBot\Telegram\Core\Storage\FileStorage as FS;
+use Amirm\T_Bot\Telegram\Core\Storage\FileStorage as FS;
 
 class FileStorage extends FS
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace Amirm\TBot\Telegram\bots\Family\reacts;
+namespace Amirm\T_Bot\Telegram\bots\Family\reacts;
 
-use Amirm\TBot\Telegram\Core\Chat\InlineButton;
-use Amirm\TBot\Telegram\Core\Chat\SingleChat;
-use Amirm\TBot\Telegram\Core\Reactable;
+use Amirm\T_Bot\Telegram\Core\Chat\InlineButton;
+use Amirm\T_Bot\Telegram\Core\Chat\SingleChat;
+use Amirm\T_Bot\Telegram\Core\Reactable;
 use Illuminate\Support\Facades\App;
 
 class ReactStartButtonLanguage extends Reactable
@@ -12,8 +12,8 @@ class ReactStartButtonLanguage extends Reactable
 
     public function use(): void
     {
-        $this->getBot()->reactTo("select_language", [$this, "startLang"]);
-        $this->getBot()->reactTo(["select_language_en", "select_language_fa", "select_language_sp"], [$this, "selectLang"]);
+        $this->geT_Bot()->reactTo("select_language", [$this, "startLang"]);
+        $this->geT_Bot()->reactTo(["select_language_en", "select_language_fa", "select_language_sp"], [$this, "selectLang"]);
     }
 
     public static function btnLangs(): array
@@ -31,7 +31,7 @@ class ReactStartButtonLanguage extends Reactable
 
     public function startLang($chat_id, $message, $point, $message_id): void
     {
-        $this->getBot()->editMessageText(
+        $this->geT_Bot()->editMessageText(
             SingleChat::create($chat_id, $message_id)
                 ->setReplyMarkupInlineKeyboardRow(ReactStartButtonLanguage::btnLangs())
                 ->addText(__("Select your preferred language"))
@@ -42,7 +42,7 @@ class ReactStartButtonLanguage extends Reactable
     {
         $lng = str_replace("select_language_", "", $message);
         if (!in_array($lng, ["en", "fa"])) {
-            $this->getBot()->editMessageText(
+            $this->geT_Bot()->editMessageText(
                 SingleChat::create($chat_id, $message_id)
                     ->setReplyMarkupInlineKeyboardRow(ReactStartButtonLanguage::btnLangs())
                     ->addText(__("Right now, this language is not supported"))
@@ -51,9 +51,9 @@ class ReactStartButtonLanguage extends Reactable
             );
             return;
         }
-        $this->getBot()->getStorage()->writeUser($chat_id, "lang", $lng);
+        $this->geT_Bot()->getStorage()->writeUser($chat_id, "lang", $lng);
         App::setLocale($lng);
-        ReactStart::sendStartMsg($this->getBot(), $chat_id, false, $message_id);
+        ReactStart::sendStartMsg($this->geT_Bot(), $chat_id, false, $message_id);
     }
 
 }

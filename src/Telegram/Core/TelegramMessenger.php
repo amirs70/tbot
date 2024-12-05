@@ -1,9 +1,9 @@
 <?php
 
-namespace Amirm\TBot\Telegram\Core;
+namespace Amirm\T_Bot\Telegram\Core;
 
-use Amirm\TBot\Init\Request;
-use Amirm\TBot\Telegram\Core\Chat\SingleChat;
+use Amirm\T_Bot\Init\Request;
+use Amirm\T_Bot\Telegram\Core\Chat\SingleChat;
 
 trait TelegramMessenger
 {

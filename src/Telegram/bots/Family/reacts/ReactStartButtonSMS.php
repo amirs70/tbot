@@ -1,25 +1,25 @@
 <?php
 
-namespace Amirm\TBot\Telegram\bots\Family\reacts;
+namespace Amirm\T_Bot\Telegram\bots\Family\reacts;
 
-use Amirm\TBot\Init\Request;
-use Amirm\TBot\Telegram\Core\Chat\SingleChat;
-use Amirm\TBot\Telegram\Core\Reactable;
+use Amirm\T_Bot\Init\Request;
+use Amirm\T_Bot\Telegram\Core\Chat\SingleChat;
+use Amirm\T_Bot\Telegram\Core\Reactable;
 
 class ReactStartButtonSMS extends Reactable
 {
 
     public function use(): void
     {
-        $this->getBot()->reactTo("sms_forward_activation", [$this, "startSMS"]);
-        $this->getBot()->reactTo("any", "sms_forward_activation", [$this, "startSMSGetNumber"]);
-        $this->getBot()->reactTo("yes_to_question", "sms_forward_activation_check_number", [$this, "yesStartSMSGetNumber"]);
-        $this->getBot()->reactTo("no_to_question", "sms_forward_activation_check_number", [$this, "noStartSMSGetNumber"]);
+        $this->geT_Bot()->reactTo("sms_forward_activation", [$this, "startSMS"]);
+        $this->geT_Bot()->reactTo("any", "sms_forward_activation", [$this, "startSMSGetNumber"]);
+        $this->geT_Bot()->reactTo("yes_to_question", "sms_forward_activation_check_number", [$this, "yesStartSMSGetNumber"]);
+        $this->geT_Bot()->reactTo("no_to_question", "sms_forward_activation_check_number", [$this, "noStartSMSGetNumber"]);
     }
 
     public function startSMS($chat_id): void
     {
-        $this->getBot()->point($chat_id, "sms_forward_activation")->sendMessage(
+        $this->geT_Bot()->point($chat_id, "sms_forward_activation")->sendMessage(
             SingleChat::create($chat_id)
                 ->setText(__("Enter the number to forward any sms that this phone receive"))
         );
@@ -27,7 +27,7 @@ class ReactStartButtonSMS extends Reactable
 
     public function startSMSGetNumber($chat_id, $message): void
     {
-        $this->getBot()->point($chat_id, "sms_forward_activation_check_number")
+        $this->geT_Bot()->point($chat_id, "sms_forward_activation_check_number")
             ->sendMessage(
                 SingleChat::create($chat_id)
                     ->setReplyMarkupInlineKeyboardRow(ReactStart::btnYesNo())
@@ -37,23 +37,23 @@ class ReactStartButtonSMS extends Reactable
 
     public function yesStartSMSGetNumber($chat_id, $message, $point, $message_id): void
     {
-        $this->getBot()
+        $this->geT_Bot()
             ->deleteMessage($chat_id, $message_id)
             ->sendMessage(
                 SingleChat::create($chat_id)
                     ->setText(__("The number you've entered has been saved"))
             );
-        ReactStart::sendStartMsg($this->getBot(), $chat_id);
+        ReactStart::sendStartMsg($this->geT_Bot(), $chat_id);
     }
 
     public function noStartSMSGetNumber($chat_id, $message, $point, $message_id): void
     {
-        $this->getBot()
+        $this->geT_Bot()
             ->deleteMessage($chat_id, $message_id)
             ->sendMessage(
                 SingleChat::create($chat_id)
                     ->setText(__("The number has been cancelled"))
             );
-        ReactStart::sendStartMsg($this->getBot(), $chat_id);
+        ReactStart::sendStartMsg($this->geT_Bot(), $chat_id);
     }
 }

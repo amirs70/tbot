@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Telegram\bots\SampleWithFolder\V2R;
+namespace Amirm\T_Bot\Telegram\bots\SampleWithFolder\V2R;
 
-use App\Init\Request;
-use App\Telegram\bots\SampleWithFolder\V2R\Profile\Reality;
-use App\Telegram\bots\SampleWithFolder\V2R\Profile\Shadowsocks;
-use App\Telegram\bots\SampleWithFolder\V2R\Profile\Trojan;
-use App\Telegram\bots\SampleWithFolder\V2R\Profile\V2RayProfilable;
-use App\Telegram\bots\SampleWithFolder\V2R\Profile\Vless;
-use App\Telegram\bots\SampleWithFolder\V2R\Profile\Vmess;
-use App\Telegram\bots\SampleWithFolder\V2R\Servers\Servers;
+use Amirm\T_Bot\Init\Request;
+use Amirm\T_Bot\Telegram\bots\SampleWithFolder\V2R\Profile\Reality;
+use Amirm\T_Bot\Telegram\bots\SampleWithFolder\V2R\Profile\Shadowsocks;
+use Amirm\T_Bot\Telegram\bots\SampleWithFolder\V2R\Profile\Trojan;
+use Amirm\T_Bot\Telegram\bots\SampleWithFolder\V2R\Profile\V2RayProfilable;
+use Amirm\T_Bot\Telegram\bots\SampleWithFolder\V2R\Profile\Vless;
+use Amirm\T_Bot\Telegram\bots\SampleWithFolder\V2R\Profile\Vmess;
+use Amirm\T_Bot\Telegram\bots\SampleWithFolder\V2R\Servers\Servers;
 
 class V2R
 {

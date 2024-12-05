@@ -1,8 +1,8 @@
 <?php
 
-namespace Amirm\TBot\Telegram\Core\Chat;
+namespace Amirm\T_Bot\Telegram\Core\Chat;
 
-use Amirm\TBot\Init\Functions;
+use Amirm\T_Bot\Init\Functions;
 
 class SingleChat
 {

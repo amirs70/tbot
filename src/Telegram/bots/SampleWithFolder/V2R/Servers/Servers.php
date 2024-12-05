@@ -1,8 +1,8 @@
 <?php
 
-namespace Amirm\TBot\Telegram\bots\SampleWithFolder\V2R\Servers;
+namespace Amirm\T_Bot\Telegram\bots\SampleWithFolder\V2R\Servers;
 
-use Amirm\TBot\Init\Functions;
+use Amirm\T_Bot\Init\Functions;
 
 class Servers
 {

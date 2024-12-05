@@ -1,6 +1,6 @@
 <?php
 
-namespace Amirm\TBot\Models;
+namespace Amirm\T_Bot\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;

@@ -1,16 +1,16 @@
 <?php
 
-namespace Amirm\TBot\Telegram\bots\SampleWithFolder;
+namespace Amirm\T_Bot\Telegram\bots\SampleWithFolder;
 
-use Amirm\TBot\Telegram\bots\SampleWithFolder\Reacts\AddServerReaction;
-use Amirm\TBot\Telegram\bots\SampleWithFolder\Reacts\Start;
-use Amirm\TBot\Telegram\bots\SampleWithFolder\V2R\Servers\Servers;
-use Amirm\TBot\Telegram\bots\SampleWithFolder\V2R\Users\Users;
-use Amirm\TBot\Telegram\Core\Chat\InlineButton;
-use Amirm\TBot\Telegram\Core\Chat\SingleChat;
-use Amirm\TBot\Telegram\Core\Storage\MySQLStorage;
-use Amirm\TBot\Telegram\Core\Storage\TelegramStorage;
-use Amirm\TBot\Telegram\Core\TelegramBot;
+use Amirm\T_Bot\Telegram\bots\SampleWithFolder\Reacts\AddServerReaction;
+use Amirm\T_Bot\Telegram\bots\SampleWithFolder\Reacts\Start;
+use Amirm\T_Bot\Telegram\bots\SampleWithFolder\V2R\Servers\Servers;
+use Amirm\T_Bot\Telegram\bots\SampleWithFolder\V2R\Users\Users;
+use Amirm\T_Bot\Telegram\Core\Chat\InlineButton;
+use Amirm\T_Bot\Telegram\Core\Chat\SingleChat;
+use Amirm\T_Bot\Telegram\Core\Storage\MySQLStorage;
+use Amirm\T_Bot\Telegram\Core\Storage\TelegramStorage;
+use Amirm\T_Bot\Telegram\Core\TelegramBot;
 use Illuminate\Support\Facades\Route;
 
 class BotSampleWithFolder extends TelegramBot

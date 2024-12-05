@@ -1,6 +1,6 @@
 <?php
 
-namespace Amirm\TBot\Init;
+namespace Amirm\T_Bot\Init;
 
 
 use GuzzleHttp\Client;
