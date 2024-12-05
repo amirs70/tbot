@@ -15,9 +15,7 @@
   "require": {
     "php": "^8.2",
     "guzzlehttp/guzzle": "7.9.2",
-    "ext-curl": "*"
-  },
-  "require-dev": {
-    "laravel/framework": "*"
+    "ext-curl": "*",
+    "laravel/framework": "11.*"
   }
 }
