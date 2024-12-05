@@ -3,6 +3,7 @@
 namespace Amirm\T_Bot\Telegram\bots\SampleWithFolder\Reacts;
 
 use Amirm\T_Bot;
+use Illuminate\Support\Facades\App;
 
 trait AddServerReaction
 {
