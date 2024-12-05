@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Telegram\bots;
+namespace Amirm\TBot\Telegram\bots;
 
 use App\Telegram\Core\Storage\MySQLStorage;
 use App\Telegram\Core\Storage\TelegramStorage;

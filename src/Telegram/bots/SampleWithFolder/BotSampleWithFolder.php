@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Telegram\bots\SampleWithFolder;
+namespace Amirm\TBot\Telegram\bots\SampleWithFolder;
 
-use App\Telegram\bots\SampleWithFolder\Reacts\AddServerReaction;
-use App\Telegram\bots\SampleWithFolder\Reacts\Start;
-use App\Telegram\bots\SampleWithFolder\V2R\Servers\Servers;
-use App\Telegram\bots\SampleWithFolder\V2R\Users\Users;
-use App\Telegram\Core\Chat\InlineButton;
-use App\Telegram\Core\Chat\SingleChat;
-use App\Telegram\Core\Storage\MySQLStorage;
-use App\Telegram\Core\Storage\TelegramStorage;
-use App\Telegram\Core\TelegramBot;
+use Amirm\TBot\Telegram\bots\SampleWithFolder\Reacts\AddServerReaction;
+use Amirm\TBot\Telegram\bots\SampleWithFolder\Reacts\Start;
+use Amirm\TBot\Telegram\bots\SampleWithFolder\V2R\Servers\Servers;
+use Amirm\TBot\Telegram\bots\SampleWithFolder\V2R\Users\Users;
+use Amirm\TBot\Telegram\Core\Chat\InlineButton;
+use Amirm\TBot\Telegram\Core\Chat\SingleChat;
+use Amirm\TBot\Telegram\Core\Storage\MySQLStorage;
+use Amirm\TBot\Telegram\Core\Storage\TelegramStorage;
+use Amirm\TBot\Telegram\Core\TelegramBot;
 use Illuminate\Support\Facades\Route;
 
 class BotSampleWithFolder extends TelegramBot

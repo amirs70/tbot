@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Telegram\bots\SampleWithFolder\V2R\Profile;
+namespace Amirm\TBot\Telegram\bots\SampleWithFolder\V2R\Profile;
 
-use App\init\Key;
+use Amirm\TBot\init\Key;
 
 class Reality extends Vless
 {

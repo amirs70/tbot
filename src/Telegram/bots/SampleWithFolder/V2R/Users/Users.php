@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Telegram\bots\SampleWithFolder\V2R\Users;
+namespace Amirm\TBot\Telegram\bots\SampleWithFolder\V2R\Users;
 
-use App\Init\Functions;
+use Amirm\TBot\Init\Functions;
 
 class Users
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Telegram\bots\SampleWithFolder\V2R\Profile;
+namespace Amirm\TBot\Telegram\bots\SampleWithFolder\V2R\Profile;
 
-use App\Init\Key;
+use Amirm\TBot\Init\Key;
 
 class Vless extends V2RayProfilable
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Telegram\bots\Family\reacts;
+namespace Amirm\TBot\Telegram\bots\Family\reacts;
 
-use App\Init\Request;
-use App\Telegram\Core\Chat\SingleChat;
-use App\Telegram\Core\Reactable;
+use Amirm\TBot\Init\Request;
+use Amirm\TBot\Telegram\Core\Chat\SingleChat;
+use Amirm\TBot\Telegram\Core\Reactable;
 
 class ReactStartButtonSMS extends Reactable
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Telegram\bots\SampleWithFolder\Reacts;
+namespace Amirm\TBot\Telegram\bots\SampleWithFolder\Reacts;
 
-use App\Telegram\Core\Chat\SingleChat;
-use App\Telegram\Core\Reactable;
+use Amirm\TBot\Telegram\Core\Chat\SingleChat;
+use Amirm\TBot\Telegram\Core\Reactable;
 
 class Start extends Reactable
 {

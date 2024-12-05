@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Telegram\bots\SampleWithFolder\V2R\Profile;
+namespace Amirm\TBot\Telegram\bots\SampleWithFolder\V2R\Profile;
 
-use App\Init\Functions;
-use App\Init\Key;
+use Amirm\TBot\Init\Functions;
+use Amirm\TBot\Init\Key;
 
 class Shadowsocks extends V2RayProfilable
 {

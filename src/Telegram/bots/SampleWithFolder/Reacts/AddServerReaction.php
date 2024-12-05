@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Telegram\bots\SampleWithFolder\Reacts;
+namespace Amirm\TBot\Telegram\bots\SampleWithFolder\Reacts;
 
-use App;
+use Amirm\TBot;
 
 trait AddServerReaction
 {

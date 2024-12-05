@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Telegram\bots\Family\reacts;
+namespace Amirm\TBot\Telegram\bots\Family\reacts;
 
-use App\Telegram\Core\Chat\InlineButton;
-use App\Telegram\Core\Chat\SingleChat;
-use App\Telegram\Core\Reactable;
-use App\Telegram\Core\TelegramBot;
+use Amirm\TBot\Telegram\Core\Chat\InlineButton;
+use Amirm\TBot\Telegram\Core\Chat\SingleChat;
+use Amirm\TBot\Telegram\Core\Reactable;
+use Amirm\TBot\Telegram\Core\TelegramBot;
 
 class ReactStart extends Reactable
 {
