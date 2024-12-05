@@ -43,11 +43,11 @@ class Telegram
         $bots = (array)scandir(__DIR__ . "/../bots");
         unset($bots[0], $bots[1]);
         foreach ($bots as $bot) {
-            if (file_exists(app_path("Telegram/bots/$bot/Bot$bot.php"))) {
-                $b = "\\App\\Telegram\\bots\\$bot\\Bot$bot";
+            if (file_exists(app_path("bots/$bot/Bot$bot.php"))) {
+                $b = "\\App\\bots\\$bot\\Bot$bot";
                 $bo = new $b();
-            } elseif (file_exists(app_path("Telegram/bots/$bot"))) {
-                $b = "\\App\\Telegram\\bots\\" . str_replace(".php", "", $bot);
+            } elseif (file_exists(app_path("bots/$bot"))) {
+                $b = "\\App\\bots\\" . str_replace(".php", "", $bot);
                 $bo = new $b();
             }
             if (isset($bo) && $bo instanceof TelegramBot) {
