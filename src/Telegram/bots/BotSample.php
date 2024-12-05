@@ -2,9 +2,9 @@
 
 namespace Amirm\TBot\Telegram\bots;
 
-use App\Telegram\Core\Storage\MySQLStorage;
-use App\Telegram\Core\Storage\TelegramStorage;
-use App\Telegram\Core\TelegramBot;
+use Amirm\TBot\Telegram\Core\Storage\MySQLStorage;
+use Amirm\TBot\Telegram\Core\Storage\TelegramStorage;
+use Amirm\TBot\Telegram\Core\TelegramBot;
 
 class BotSample extends TelegramBot
 {
