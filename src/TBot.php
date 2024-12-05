@@ -6,6 +6,6 @@ class TBot
 {
     public function __construct()
     {
-        echo "hello world";
+        echo "hello world ";
     }
 }
