@@ -1,6 +1,6 @@
 {
   "name": "amirm/t_bot",
-  "version": "0.0.0",
+  "version": "0.0.2",
   "description": "Multiple telegram bot with the same website",
   "autoload": {
     "psr-4": {
